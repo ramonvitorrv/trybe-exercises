@@ -1,0 +1,22 @@
+body{
+    font-size: 16px;
+  }
+  h1{
+    font-family: sans-serif;
+    font-size: 65px;
+    color: orange;
+  }
+  p{
+    font-weight: 600;
+    font-size: 3em;
+  }
+  ul{
+    background-color: red;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+    line-height: 50px;
+  }
+  .corDeFundo_p_ul{
+    background-color: aqua;
+  }
