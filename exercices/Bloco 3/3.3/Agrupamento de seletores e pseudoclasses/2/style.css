@@ -1,0 +1,30 @@
+div {
+    background-color: crimson;
+}
+
+div:nth-child(5) h3 {
+    padding: 25px;
+}
+
+div:hover {
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+}
+
+div:nth-child(odd) {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+div:nth-child(odd) h3 {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+h3 {
+    color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
