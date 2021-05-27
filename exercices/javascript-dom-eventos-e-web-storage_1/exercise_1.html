@@ -51,7 +51,7 @@
         5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
         6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-       
+
         function mudaTexto() {
             let mudaTexto = document.getElementsByTagName("p")[1].innerText = "Trabalhando na área de programação.";
         }
@@ -77,6 +77,13 @@
             modificaMaiusculo.innerText = modificaMaiusculo.innerText.toUpperCase();
         }
         modificaMaiusculo();
+
+        function exibirConsole() {
+            let exibirConsole = document.getElementsByTagName("p");
+            for (let index = 0; index < exibirConsole.length; index += 1)
+            console.log(exibirConsole[index].innerText);
+        }
+        exibirConsole();
 
     </script>
   </body>
