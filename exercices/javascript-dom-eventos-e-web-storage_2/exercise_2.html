@@ -104,10 +104,14 @@
         }
 
         // Exercício 1:
-        const tagTitle = document.getElementsByClassName('tagH1')[0];
+        const tagTitle = document.getElementsByTagName('h1')[0];
         tagTitle.className = 'title';
 
-        
+        // Exercício 2:
+        const addClassToTagH3 = document.getElementsByTagName('h3');
+        for (let i = 0; i < addClassToTagH3.length; i += 1) {
+            TagH3[i].className = "description";
+        }
     </script>
 </body>
 
