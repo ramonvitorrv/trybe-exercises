@@ -110,8 +110,12 @@
         // Exercício 2:
         const addClassToTagH3 = document.getElementsByTagName('h3');
         for (let i = 0; i < addClassToTagH3.length; i += 1) {
-            TagH3[i].className = "description";
+            addClassToTagH3[i].className = "description";
         }
+
+        // Exercício 3:
+        const removeDivLeft = document.getElementsByClassName('left-content')[0];
+        divMain.removeChild(removeDivLeft);
     </script>
 </body>
 
