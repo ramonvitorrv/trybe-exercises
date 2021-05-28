@@ -95,6 +95,16 @@
         imgDivLeft.src = "https://picsum.photos/200";
         divLeft.appendChild(imgDivLeft);
 
+        // Exercício 8:
+        const listaDesordenada = document.createElement('ul');
+        divRight.appendChild(listaDesordenada);
+        const arrayLista = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+        for (let i = 0; i < arrayLista.length; i += 1 ) {
+            const listaLi = document.createElement('li');
+            listaLi.innerText = arrayLista[i];
+            listaDesordenada.appendChild(listaLi);
+        }
+
     </script>
 </body>
 
