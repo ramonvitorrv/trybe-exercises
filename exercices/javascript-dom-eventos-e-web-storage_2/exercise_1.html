@@ -73,7 +73,7 @@
         const divCenter = document.createElement('div');
         divCenter.className = "center-content";
         divMain.appendChild(divCenter);
-        
+
         // Exercício 4:
         const p1DivCenter = document.createElement('p');
         p1DivCenter.innerText = "Parágrafo 1, da divCenter";
@@ -99,12 +99,18 @@
         const listaDesordenada = document.createElement('ul');
         divRight.appendChild(listaDesordenada);
         const arrayLista = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
-        for (let i = 0; i < arrayLista.length; i += 1 ) {
+        for (let i = 0; i < arrayLista.length; i += 1) {
             const listaLi = document.createElement('li');
             listaLi.innerText = arrayLista[i];
             listaDesordenada.appendChild(listaLi);
         }
 
+        // Exercício 9:
+        for (let i = 1; i <= 3; i += 1) {
+            const tagH3 = document.createElement('h3');
+            tagH3.innerText = "H3 número: " + i;
+            divMain.appendChild(tagH3)
+        }
     </script>
 </body>
 
