@@ -1,13 +1,16 @@
-let array = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let array = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54]
 
-for (let index = 1; index < array.length; index += 1) {
-    for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
-      if (array[index] > array[secondIndex]) {
-        let position = array[index];
-        array[index] = array[secondIndex];
-        array[secondIndex] = position;
-      }
-    }
+// Percorre o array:
+for (let i = 1; i < array.length; i += 1) {
+// Verifica a ordem dos números:
+  for (let j = 0; j < array.length; j += 1)
+// Se o Valor da posição um do array for maior que o da posição 2:
+  if (array[j] < array[j + 1]) {
+// Inverte a posição:
+    let inverteNum = array[j];
+    array[j] = array[j + 1];
+    array[j + 1] = inverteNum;
   }
+}
 
-  console.log(array)
+console.log(array)
