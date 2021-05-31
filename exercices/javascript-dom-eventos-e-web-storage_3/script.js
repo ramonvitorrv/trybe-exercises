@@ -18,18 +18,23 @@ function createNumberOfDays() {
   for (let index = 0 ; index < dezDaysList.length; index += 1) {
     const day = dezDaysList[index]
     const dayItem = document.createElement('li');
-    dayItem.className = "day"
+    dayItem.className = "day";
+
     if (day === 24 || day === 25 || day === 31){
       dayItem.className = `${dayItem.getAttribute('class')} holiday`;
     }
     if (day === 4 || day === 11 || day === 18 || day === 25) {
       dayItem.className = `${dayItem.getAttribute('class')} friday`;
     }
+    
     dayItem.innerHTML = day;
     days.appendChild(dayItem);
   }
 
 }
-
 createDaysOfTheWeek();
 createNumberOfDays();
+
+function feriados() {
+
+}
