@@ -10,31 +10,26 @@ function createDaysOfTheWeek() {
     weekDaysList.appendChild(dayListItem);
   };
 };
-
-function createNumberOfDays() {
-  const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  const days = document.querySelector('#days');
-
-  for (let index = 0 ; index < dezDaysList.length; index += 1) {
-    const day = dezDaysList[index]
-    const dayItem = document.createElement('li');
-    dayItem.className = "day";
-
-    if (day === 24 || day === 25 || day === 31){
-      dayItem.className = `${dayItem.getAttribute('class')} holiday`;
-    }
-    if (day === 4 || day === 11 || day === 18 || day === 25) {
-      dayItem.className = `${dayItem.getAttribute('class')} friday`;
-    }
-    
-    dayItem.innerHTML = day;
-    days.appendChild(dayItem);
-  }
-
-}
 createDaysOfTheWeek();
-createNumberOfDays();
 
-function feriados() {
+function createNumberDayWeek() {
+  const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+  const days = document.getElementById("days");
 
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    const day = dezDaysList[index];
+    const liElement = document.createElement('li');
+    days.appendChild(liElement);
+    
+    if ([24, 25, 31].includes(day)) {
+      liElement.className = ('day holiday');
+    } else if ([4, 11, 18, 25].includes(day)) {
+      liElement.className = ('day friday');
+    } else {
+      liElement.className = 'day';
+    }
+
+    liElement.innerText = day;
+  }
 }
+createNumberDayWeek();
