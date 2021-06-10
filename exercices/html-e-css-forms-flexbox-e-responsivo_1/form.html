@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <fieldset>
+    <legend>Formulário de Currículo</legend>
+
+    <label for="input-nome">Nome:</label>
+    <input type="text" name="nome" id="input-nome" maxlength="40" required>
+
+    <label for="input-email">Email:</label>
+    <input type="email" name="email" id="input-email" maxlength="50" required>
+
+    <label for="input-cpf">CPF:</label>
+    <input type="text" name="cpf" id="input-cpf" maxlength="11" required>
+
+    <label for="input-endereco">Endereço:</label>
+    <input type="text" name="endereco" id="input-endereco" maxlength="200" required>
+
+    <label for="input-cidade">Cidade</label>
+    <input type="text" name="cidade" id="input-cidade" required>
+
+    <label for="select-estado">Estado:</label>
+    <select name="estado" id="select-estado" required>
+     <option selected>Selecione</option>
+    </select>
+
+    <label for="radio-casa"></label>
+    <input type="radio" name="tipo-residencia" id="radio-casa" required>Casa
+
+    <label for="radio-apartamento"></label>
+    <input type="radio" name="tipo-residencia" id="radio-apartamento" required>Apartamento
+  </fieldset>
+
+  <fieldset>
+    <legend>Dados sobre o último emprego</legend>
+    
+    <p>Resumo do Currículo:</p>
+    <textarea name="resumo-curriculo" id="resumo-curriculo" cols="50" rows="10" maxlength="1000" placeholder="Limite de 1000 caractéres" required></textarea>
+    <br>
+
+    <label for="input-cargo">Cargo</label>
+    <input type="text" name="cargo" id="input-cargo" maxlength="40" required>
+
+    <p>Descrição do cargo:</p>
+    <textarea name="descricao-cargo" id="descricao-cargo" cols="50" rows="10" maxlength="500" placeholder="Limite de 500 caractéres" required></textarea>
+    <br>
+
+    <label for="data-inicio">Data de início:</label>
+    <input type="date" name="data-inicio" id="data-inicio">
+
+  </fieldset>
+  <script src="script.js"></script>
+</body>
+</html>
