@@ -1,0 +1,9 @@
+body {
+  max-width: 70%;
+  margin: auto;
+  background-color: whitesmoke;
+}
+
+#fieldset-legend {
+  font-size: 25px;
+}
