@@ -64,20 +64,25 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-// 1 - Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais. 
 
-const expectedResult = [
-  'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-  'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-  'Fundação - Ficção Científica - Isaac Asimov',
-  'Duna - Ficção Científica - Frank Herbert',
-  'A Coisa - Terror - Stephen King',
-  'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
-];
+const expectedResult = 'O Senhor dos Anéis';
 
-function formatedBookNames() {
+function authorWith3DotsOnName() {
   // escreva seu código aqui
-  return books.map(book => `${book.name} - ${book.genre} - ${book.author.name}`)
+  return books.find((book) => (book.author.name.split(' ')
+  .filter((word) => word.endsWith('.')).length === 3)).name;
 }
 
-assert.deepStrictEqual(formatedBookNames(), expectedResult);
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+
+// Gabarito:
+// function authorWith3DotsOnName() {
+//  return books.find((book) => (
+//    book.author.name.split(' ').filter((word) => word.endsWith('.')).length === 3
+//  )).name;
+// }
+
+// Forma como fiz:
+// return books.filter(book => book.author.name.startsWith('J. R. R.'))
+//  .map(book => book.name);
